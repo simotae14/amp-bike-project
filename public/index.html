@@ -598,7 +598,8 @@
         div.youtube-video,
         div.carousel,
         div.video,
-        div.social-links {
+        div.social-links,
+        div.form {
             margin-bottom: 2rem;
         }
 
@@ -637,6 +638,8 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <!-- amp accordion script -->
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <!-- amp form script -->
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 </head>
 
 <body>
@@ -723,8 +726,26 @@
                     </div>
                 </amp-video>
             </div>
+            <div class="form">
+                <h2 class="main-heading">Subscribe to our Newsletter</h2>
+                <div class="subscribe-card-container">
+                    <div class="subscribe-card">
+                        <form class="main-form" method="post" action-xhr="/submit-form" target="_top">
+                            <div class="input">
+                                <input type="text" name="name" id="form-name" required>
+                                <label for="form-name">Name:</label>
+                            </div>
+                            <div class="input">
+                                <input type="email" name="email" id="form-email" required>
+                                <label for="form-email">Email:</label>
+                            </div>
+                            <input class="btn" type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="social-links">
-                <h2 class="main-heading">Video Amp Tag</h2>
+                <h2 class="main-heading">Sociali Links Tag</h2>
                 <div class="social-bar">
                     <amp-social-share width="44" height="44" type="email"></amp-social-share>
                     <amp-social-share width="44" height="44" type="linkedin"></amp-social-share>
