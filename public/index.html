@@ -607,6 +607,21 @@
             justify-content: center;
             margin-top: 2rem;
         }
+
+        div.hamburger {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!-- youtube amp script -->
@@ -618,12 +633,43 @@
     <!-- amp social-share script -->
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js">
     </script>
+    <!-- amp sidebar script -->
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 </head>
 
 <body>
     <header class="headerbar">
+        <div 
+            role="button" 
+            class="navbar-trigger" 
+            on="tap:sidebar1.toggle" 
+            tabindex="0" 
+        >☰</div>
         <h2>Chico's Cheese Bicycles</h2>
     </header>
+    <amp-sidebar 
+        class="sidebar" 
+        id="sidebar1" 
+        layout="nodisplay" 
+        side="left"
+    >
+        <div 
+            role="button" 
+            aria-label="close sidebar" 
+            on="tap:sidebar1.toggle" 
+            tabindex="0" 
+            class="navbar-trigger"
+        >✕
+        </div>
+        <nav class="nav">
+            <ul class="label">
+                <li class="nav-item"><a href="#">Our Story</a></li>
+                <li class="nav-item"><a href="#">Our Bikes</a></li>
+                <li class="nav-item"><a href="#">Latest Models</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </amp-sidebar>
     <main>
         <div class="main-content">
             <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fricotta-racer.jpg?1540228217746"
