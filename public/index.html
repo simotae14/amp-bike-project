@@ -635,37 +635,47 @@
     </script>
     <!-- amp sidebar script -->
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <!-- amp accordion script -->
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 </head>
 
 <body>
     <header class="headerbar">
-        <div 
-            role="button" 
-            class="navbar-trigger" 
-            on="tap:sidebar1.toggle" 
-            tabindex="0" 
-        >☰</div>
+        <div role="button" class="navbar-trigger" on="tap:sidebar1.toggle" tabindex="0">☰</div>
         <h2>Chico's Cheese Bicycles</h2>
     </header>
-    <amp-sidebar 
-        class="sidebar" 
-        id="sidebar1" 
-        layout="nodisplay" 
-        side="left"
-    >
-        <div 
-            role="button" 
-            aria-label="close sidebar" 
-            on="tap:sidebar1.toggle" 
-            tabindex="0" 
-            class="navbar-trigger"
-        >✕
+    <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
+        <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="navbar-trigger">✕
         </div>
         <nav class="nav">
             <ul class="label">
                 <li class="nav-item"><a href="#">Our Story</a></li>
-                <li class="nav-item"><a href="#">Our Bikes</a></li>
-                <li class="nav-item"><a href="#">Latest Models</a></li>
+                <li class="nav-item nav-dropdown">
+                    <amp-accordion class="dropdown" layout="container">
+                        <section>
+                            <header>
+                                Our Bikes
+                            </header>
+                            <ul class="dropdown-items">
+                                <li class="dropdown-item"><a href="#">Ricotta Racer</a></li>
+                                <li class="dropdown-item"><a href="#">Cheddar Chaser</a></li>
+                                <li class="dropdown-item"><a href="#">Parmesan Pacer</a></li>
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
+                <li class="nav-item nav-dropdown">
+                    <amp-accordion class="dropdown" layout="container">
+                        <section>
+                            <header>
+                                Latest Models
+                            </header>
+                            <ul class="dropdown-items">
+                                <li class="dropdown-item"><a href="#">Ricotta Racer</a></li>
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
                 <li class="nav-item"><a href="#">Contact</a></li>
             </ul>
         </nav>
