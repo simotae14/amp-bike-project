@@ -594,10 +594,16 @@
             font-weight: bold;
             font-size: 16px;
         }
+
+        amp-youtube, amp-carousel {
+            margin-bottom: 2rem;
+        }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!-- youtube amp script -->
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <!-- amp caroousel script -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
 </head>
 
 <body>
@@ -606,14 +612,10 @@
     </header>
     <main>
         <div class="main-content">
-            <amp-img 
-                src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fricotta-racer.jpg?1540228217746"
-                width="640" 
-                height="480"
-                layout="responsive"
-            >
+            <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fricotta-racer.jpg?1540228217746"
+                width="640" height="480" layout="responsive">
             </amp-img>
-            <div class=" below-hero">
+            <div class="below-hero">
                 <h2 class="main-heading">What we're about</h2>
                 <p class="main-text">
                     We sell the only ten-speed bicycles in the world made entirely of
@@ -622,13 +624,13 @@
                     rodent-repelling varnish they last longer than ever!
                 </p>
             </div>
-            <amp-youtube
-                data-videoid="fhwUMDX4K8o"
-                layout="responsive"
-                width="480" 
-                height="270"
-            >
+            <amp-youtube data-videoid="fhwUMDX4K8o" layout="responsive" width="480" height="270">
             </amp-youtube>
+            <amp-carousel width="412" height="309" layout="responsive" type="slides" loop autoplay>
+                <amp-img layout="responsive" src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheddar-chaser.jpg?v=1540228205366" width="412" height="309"></amp-img>
+                <amp-img layout="responsive" src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheese.jpg?v=1540228223785" width="412" height="309"></amp-img>
+                <amp-img layout="responsive" src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fmouse.jpg?v=1540228223963" width="412" height="309"></amp-img>
+            </amp-carousel>
         </div>
     </main>
 </body>
