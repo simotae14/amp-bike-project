@@ -597,8 +597,15 @@
 
         div.youtube-video,
         div.carousel,
-        div.video {
+        div.video,
+        div.social-links {
             margin-bottom: 2rem;
+        }
+
+        div.social-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
         }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -608,6 +615,9 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <!-- amp video script -->
     <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <!-- amp social-share script -->
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js">
+    </script>
 </head>
 
 <body>
@@ -656,6 +666,15 @@
                         <p>This browser does not support the video element.</p>
                     </div>
                 </amp-video>
+            </div>
+            <div class="social-links">
+                <h2 class="main-heading">Video Amp Tag</h2>
+                <div class="social-bar">
+                    <amp-social-share width="40" height="40" type="email"></amp-social-share>
+                    <amp-social-share width="40" height="40" type="linkedin"></amp-social-share>
+                    <amp-social-share width="40" height="40" type="tumblr"></amp-social-share>
+                    <amp-social-share width="40" height="40" type="twitter"></amp-social-share>
+                </div>
             </div>
         </div>
     </main>
