@@ -595,15 +595,19 @@
             font-size: 16px;
         }
 
-        amp-youtube, amp-carousel {
+        div.youtube-video,
+        div.carousel,
+        div.video {
             margin-bottom: 2rem;
         }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!-- youtube amp script -->
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-    <!-- amp caroousel script -->
+    <!-- amp carousel script -->
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <!-- amp video script -->
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 </head>
 
 <body>
@@ -624,13 +628,35 @@
                     rodent-repelling varnish they last longer than ever!
                 </p>
             </div>
-            <amp-youtube data-videoid="fhwUMDX4K8o" layout="responsive" width="480" height="270">
-            </amp-youtube>
-            <amp-carousel width="412" height="309" layout="responsive" type="slides" loop autoplay>
-                <amp-img layout="responsive" src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheddar-chaser.jpg?v=1540228205366" width="412" height="309"></amp-img>
-                <amp-img layout="responsive" src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheese.jpg?v=1540228223785" width="412" height="309"></amp-img>
-                <amp-img layout="responsive" src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fmouse.jpg?v=1540228223963" width="412" height="309"></amp-img>
-            </amp-carousel>
+            <div class="youtube-video">
+                <h2 class="main-heading">Youtube Amp Tag</h2>
+                <amp-youtube data-videoid="fhwUMDX4K8o" layout="responsive" width="480" height="270">
+                </amp-youtube>
+            </div>
+            <div class="carousel">
+                <h2 class="main-heading">Carousel Amp Tag</h2>
+                <amp-carousel width="412" height="309" layout="responsive" type="slides" loop autoplay>
+                    <amp-img layout="responsive"
+                        src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheddar-chaser.jpg?v=1540228205366"
+                        width="412" height="309"></amp-img>
+                    <amp-img layout="responsive"
+                        src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheese.jpg?v=1540228223785"
+                        width="412" height="309"></amp-img>
+                    <amp-img layout="responsive"
+                        src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fmouse.jpg?v=1540228223963"
+                        width="412" height="309"></amp-img>
+                </amp-carousel>
+            </div>
+            <div class="video">
+                <h2 class="main-heading">Video Amp Tag</h2>
+                <amp-video controls width="480" height="270" layout="responsive">
+                    <source src="https://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm" />
+                    <source src="https://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4" />
+                    <div fallback>
+                        <p>This browser does not support the video element.</p>
+                    </div>
+                </amp-video>
+            </div>
         </div>
     </main>
 </body>
