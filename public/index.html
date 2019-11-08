@@ -640,6 +640,11 @@
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <!-- amp form script -->
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <!-- amp analytics script-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- amp install service worker script -->
+    <script async custom-element="amp-install-serviceworker"
+        src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 </head>
 
 <body>
@@ -755,6 +760,9 @@
             </div>
         </div>
     </main>
+    <amp-install-serviceworker src="/serviceworker.js" data-iframe-src="https://amp.dev/serviceworker.html"
+        layout="nodisplay">
+    </amp-install-serviceworker>
 </body>
 
 </html>
