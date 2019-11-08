@@ -641,13 +641,26 @@
     <!-- amp form script -->
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <!-- amp analytics script-->
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!--<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>-->
     <!-- amp install service worker script -->
-    <script async custom-element="amp-install-serviceworker"
-        src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <!--<script async custom-element="amp-install-serviceworker"
+        src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>-->
+    <!-- amp ad script -->
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <!-- amp sticky ad -->
+    <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>
+    <!-- amp flying carpet -->
+    <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js">
+    </script>
 </head>
 
 <body>
+    <amp-ad width="300" height="250" type="doubleclick" data-slot="/212734150/ampworkshop/imagead"
+        json='{"targeting":{"team":["liverpool"]}}'>
+        <div placeholder></div>
+        <div fallback></div>
+    </amp-ad>
+
     <header class="headerbar">
         <div role="button" class="navbar-trigger" on="tap:sidebar1.toggle" tabindex="0">☰</div>
         <h2>Chico's Cheese Bicycles</h2>
@@ -721,6 +734,12 @@
                         width="412" height="309"></amp-img>
                 </amp-carousel>
             </div>
+            <!-- Flying carpet ads -->
+            <amp-fx-flying-carpet height="300px">
+                <amp-ad width="300" height="600" layout="fixed" type="doubleclick"
+                    data-slot="/212734150/ampworkshop/flyingcarpet">
+                </amp-ad>
+            </amp-fx-flying-carpet>
             <div class="video">
                 <h2 class="main-heading">Video Amp Tag</h2>
                 <amp-video controls width="480" height="270" layout="responsive">
@@ -749,6 +768,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Data loading strategy -->
+            <amp-ad width="300" height="250" type="doubleclick" data-slot="/212734150/ampworkshop/imagead"
+                data-loading-strategy="2">
+                <div placeholder></div>
+                <div fallback></div>
+            </amp-ad>
             <div class="social-links">
                 <h2 class="main-heading">Sociali Links Tag</h2>
                 <div class="social-bar">
@@ -760,9 +785,22 @@
             </div>
         </div>
     </main>
-    <amp-install-serviceworker src="/serviceworker.js" data-iframe-src="https://amp.dev/serviceworker.html"
+    <amp-ad width="300" height="250" type="doubleclick"
+        data-slot="/212734150/ampworkshop/this_ad_unit_doesnt_return_an_ad">
+        <div placeholder>Placeholder</div>
+        <div fallback>Fallback</div>
+    </amp-ad>
+    <!-- Sticky ads -->
+    <amp-sticky-ad layout="nodisplay">
+        <amp-ad width="320" height="50" type="doubleclick" data-slot="/212734150/ampworkshop/stickyad">
+            <div placeholder>Placeholder</div>
+            <div fallback>Fallback</div>
+        </amp-ad>
+    </amp-sticky-ad>
+    <div class="amp-flying-carpet-text-border">Advertising</div>
+    <!--<amp-install-serviceworker src="/serviceworker.js" data-iframe-src="https://amp.dev/serviceworker.html"
         layout="nodisplay">
-    </amp-install-serviceworker>
+    </amp-install-serviceworker>-->
 </body>
 
 </html>
